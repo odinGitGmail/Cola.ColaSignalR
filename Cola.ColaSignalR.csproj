@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <Version>1.0.3</Version>
+        <Title>Cola.ColaSignalR</Title>
+        <Authors>OdinSam</Authors>
+        <Description>Cola.ColaSignalR 框架</Description>
+        <Copyright>copyRight © 2023 OdinSam</Copyright>
+        <PackageProjectUrl>https://github.com/odinGitGmail/Cola.ColaSignalR</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/odinGitGmail/Cola.ColaSignalR</RepositoryUrl>
+        <PackageTags>nacos;signalR</PackageTags>
+        <AssemblyVersion>1.0.3</AssemblyVersion>
+        <FileVersion>1.0.3</FileVersion>
+        <PackageIcon>icon.png</PackageIcon>
+        <PackageReadmeFile>./readme.md</PackageReadmeFile>
+    </PropertyGroup>
+    <ItemGroup>
+        <None Include="icon.png"  Pack="true" PackagePath="\" />
+        <EmbeddedResource Include="icon.png">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </EmbeddedResource>
+    </ItemGroup>
+    <ItemGroup>
+        <None Include="readme.md" Pack="true" PackagePath="\"/>
+    </ItemGroup>
+    <ItemGroup>
+      <PackageReference Include="Microsoft.AspNetCore.SignalR" Version="1.1.0" />
+      <PackageReference Include="Microsoft.AspNetCore.SignalR.Protocols.NewtonsoftJson" Version="6.0.0" />
+      <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
+    </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\Cola.Core\Cola.Core.csproj" />
+    </ItemGroup>
+</Project>
